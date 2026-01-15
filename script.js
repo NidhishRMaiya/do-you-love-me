@@ -5,16 +5,26 @@ const heartLoader = document.getElementById("heartLoader");
 const resultContainer = document.getElementById("resultContainer");
 const gifResult = document.getElementById("gifResult");
 
-noBtn.addEventListener("mouseover", () => {
-  const maxX = questionContainer.offsetWidth - noBtn.offsetWidth;
-  const maxY = questionContainer.offsetHeight - noBtn.offsetHeight;
+function moveNo() {
+  const padding = 20;
 
-  const newX = Math.floor(Math.random() * maxX);
-  const newY = Math.floor(Math.random() * maxY);
+  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
 
+  const minX = padding;
+  const minY = padding;
+
+  const newX = Math.random() * (maxX - minX) + minX;
+  const newY = Math.random() * (maxY - minY) + minY;
+
+  noBtn.style.position = "fixed";
   noBtn.style.left = `${newX}px`;
   noBtn.style.top = `${newY}px`;
-});
+}
+
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+
 
 yesBtn.addEventListener("click", () => {
   questionContainer.style.display = "none";
