@@ -62,14 +62,24 @@ button {
 }
 
 .loader {
+  position: fixed;
+  inset: 0;
   display: none;
-  font-size: 40px;
-  animation: pulse 1s infinite;
+  justify-content: center;
+  align-items: center;
 }
 
 .result {
+  position: fixed;
+  inset: 0;
   display: none;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   color: #ff4d6d;
 }
 
@@ -83,5 +93,6 @@ button {
   width: 160px;
   margin-top: 60px;
 }
+
 
 
