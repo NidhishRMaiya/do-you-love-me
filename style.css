@@ -72,15 +72,15 @@ button {
 .result {
   position: fixed;
   inset: 0;
-  display: none;
-  text-align: center;
+  display: none;              /* 🔥 hidden initially */
 
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  text-align: center;
   color: #ff4d6d;
+  z-index: 10;
 }
 
 @keyframes pulse {
@@ -93,6 +93,7 @@ button {
   width: 160px;
   margin-top: 60px;
 }
+
 
 
 
