@@ -62,25 +62,14 @@ button {
 }
 
 .loader {
-  position: fixed;
-  inset: 0;
   display: none;
-  justify-content: center;
-  align-items: center;
+  font-size: 40px;
+  animation: pulse 1s infinite;
 }
 
 .result {
-  position: fixed;
-  inset: 0;
-  display: none;              /* 🔥 hidden initially */
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  display: none;
   text-align: center;
-  color: #ff4d6d;
-  z-index: 10;
 }
 
 @keyframes pulse {
@@ -93,7 +82,3 @@ button {
   width: 160px;
   margin-top: 60px;
 }
-
-
-
-
