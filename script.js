@@ -36,3 +36,4 @@ yesBtn.addEventListener("click", () => {
     gifResult.play();
   }, 3000);
 });
+
