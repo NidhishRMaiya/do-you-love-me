@@ -70,6 +70,7 @@ button {
 .result {
   display: none;
   text-align: center;
+  color: #ff4d6d;
 }
 
 @keyframes pulse {
@@ -82,4 +83,5 @@ button {
   width: 160px;
   margin-top: 60px;
 }
+
 
